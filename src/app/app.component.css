@@ -1,0 +1,51 @@
+.box-container {
+	display: flex;
+	justify-content: center;
+}
+
+.text-container {
+	width: 200px;
+	background: #0e2f4d;
+	padding: 40px;
+	text-align: center;
+}
+
+.text {
+	color: #aa8800;
+	font-size: 35px;
+	display: inline-block;
+}
+
+.text.done {
+	color: #ffffffdc;
+	font-size: 15px;
+	display: block;
+	padding: 10px 0 0 0;
+	border-bottom: solid 1px #0e2f4d;
+	text-transform: capitalize;
+	position: relative;
+	cursor: pointer;
+	letter-spacing: 1px;
+	transition: letter-spacing 0.3s ease 0s;
+}
+
+.text.done:hover {
+	letter-spacing: 5px;
+}
+
+.text.done::after {
+	content: ""; /***  ***/
+	position: absolute; /***  ***/
+	background: #ffffffdc;
+	height: 1.5px;
+	display: block;
+	bottom: 0;
+	width: 0px;
+	left: 50%;
+	transition: width 0.3s ease 0s, left 0.3s ease 0s;
+}
+
+.text.done:hover::after {
+	width: 100%;
+	left: 0;
+}
